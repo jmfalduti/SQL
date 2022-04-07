@@ -1,0 +1,20 @@
+CREATE TABLE smartstore (id INTEGER PRIMARY KEY, item TEXT, price INTEGER, qnt INTEGER, ord INTEGER);
+
+INSERT INTO smartstore VALUES (1, "Smart Plug", 19.99, 15, 5);
+INSERT INTO smartstore VALUES (2, "Outdoor Plug", 34.99, 17, 3);INSERT INTO smartstore VALUES (3, "Indoor Camera", 19.99, 36, 14);
+INSERT INTO smartstore VALUES (4, "Outdoor Camera", 69.99, 22, 8);
+INSERT INTO smartstore VALUES (5, "White Bulb", 24.99, 34, 16);
+INSERT INTO smartstore VALUES (6, "Color Bulb", 29.99, 18, 17);
+INSERT INTO smartstore VALUES (7, "White Bulb 3pk", 69.99, 12, 8);
+INSERT INTO smartstore VALUES (8, "Color Bulb 3pk", 79.99, 18, 7);
+INSERT INTO smartstore VALUES (9, "Thermostat", 149.99, 27, 3);
+INSERT INTO smartstore VALUES (10, "Home Hub", 199.99, 20, 10);
+INSERT INTO smartstore VALUES (11, "Home Hub Mini", 129.99, 38, 12);
+INSERT INTO smartstore VALUES (12, "Switch", 29.99, 17, 33);
+INSERT INTO smartstore VALUES (13, "Switch 3pk", 79.99, 20, 20);
+INSERT INTO smartstore VALUES (14, "TV", 349.99, 8, 2);
+INSERT INTO smartstore VALUES (15, "Door Lock", 119.99, 15, 15);
+
+SELECT * FROM smartstore
+WHERE price>50
+ORDER BY price desc; 
