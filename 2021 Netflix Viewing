@@ -1,0 +1,33 @@
+/* What does the app's SQL look like? */
+CREATE TABLE netflix_data (
+action_id INTEGER PRIMARY KEY AUTOINCREMENT,
+year numeric,
+program text,
+program_type text,
+minutes_viewed integer,
+rating integer);
+
+INSERT INTO netflix_data (year, program, program_type, minutes_viewed, rating) VALUES (2021, "Cobra Kai: Season 3", "series", 600, 5);
+INSERT INTO netflix_data (year, program, program_type, minutes_viewed, rating) VALUES (2021, "Chilling Adventures of Sabrina: Part 4", "series", 480, 4.5);
+INSERT INTO netflix_data (year, program, program_type, minutes_viewed, rating) VALUES (2021, "Castlevania: Season 4", "series", 300, 4.5);
+INSERT INTO netflix_data (year, program, program_type, minutes_viewed, rating) VALUES (2021, "The Seven Deadly Sins: Dragon's Judgement", "series", 720, 4);
+INSERT INTO netflix_data (year, program, program_type, minutes_viewed, rating) VALUES (2021, "Masters of the Universe: Revelation: Part 1", "series", 150, 4.5);
+INSERT INTO netflix_data (year, program, program_type, minutes_viewed, rating) VALUES (2021, "BEASTARS: Season 2", "series", 360, 3.75);
+INSERT INTO netflix_data (year, program, program_type, minutes_viewed, rating) VALUES (2021, "The Witcher: Nightmare of the Wolf", "film", 83, 4.5);
+INSERT INTO netflix_data (year, program, program_type, minutes_viewed, rating) VALUES (2021, "Q-Force: Season 1", "series", 300, 4.75);
+INSERT INTO netflix_data (year, program, program_type, minutes_viewed, rating) VALUES (2021, "Lucifer: Season 5", "series", 360, 4.5);
+INSERT INTO netflix_data (year, program, program_type, minutes_viewed, rating) VALUES (2021, "Lucifer: Season 6", "series", 450, 4.5);
+INSERT INTO netflix_data (year, program, program_type, minutes_viewed, rating) VALUES (2021, "tick, tick...BOOM!", "film", 115, 5);
+INSERT INTO netflix_data (year, program, program_type, minutes_viewed, rating) VALUES (2021, "Masters of the Universe: Revelation: Part 2", "series", 150, 4.75);
+INSERT INTO netflix_data (year, program, program_type, minutes_viewed, rating) VALUES (2021, "Lost in Space: Season 3", "series", 480, 4.75);
+INSERT INTO netflix_data (year, program, program_type, minutes_viewed, rating) VALUES (2021, "The Witcher: Season 2", "series", 800, 4.5);
+INSERT INTO netflix_data (year, program, program_type, minutes_viewed, rating) VALUES (2021, "Cobra Kai: Season 4", "series", 600, 4.5);
+INSERT INTO netflix_data (year, program, program_type, minutes_viewed, rating) VALUES (2021, "Don't Look Up", "film", 145, 3);
+SELECT * FROM netflix_data;
+
+UPDATE netflix_data SET rating=2.5 WHERE action_id=16;
+SELECT * FROM netflix_data;
+
+UPDATE netflix_data SET program="Lucifer: Seasons 5 & 6", minutes_viewed=810 WHERE action_id=9;
+DELETE FROM netflix_data WHERE action_id=10;
+SELECT * FROM netflix_data;
